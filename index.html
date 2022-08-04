@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="text-center text-light bg-success col-md-12">
+                    <h1>Todo Application</h1>
+                    <p>Track Todos from Anywhere-Anytime</p>
+                </div>
+            </div>
+            <div class="search">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="search-todo form-control" placeholder="Filter todos" />
+                            </div>
+                            <div class="col-md-8 form-check checkbox">
+                                <label>
+                                    <input type="checkbox" class="hidecompleted" />Hide completed
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row status-header">
+                    <h5 class="status text-danger col-md-12 font-weight-bold"></h5>
+                </div>
+                <div class="todo-form">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="new-todo form-control" placeholder="Enter todo"
+                                    required="true" />
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="submit-todo btn btn-primary">Add Todo</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="todos col-md-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Designed and Developed by Vivek Kishore(c)<a href="https://github.com/vivekishore"> Github</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!-- <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDNT4LeBxg2NnfN6Gw4SXCrnCZx6zIe7c0",
+            authDomain: "todo-application-9044a.firebaseapp.com",
+            projectId: "todo-application-9044a",
+            storageBucket: "todo-application-9044a.appspot.com",
+            messagingSenderId: "266583607363",
+            appId: "1:266583607363:web:a90ea4d645c29e2860ecf6",
+            measurementId: "G-9WVM7Y27ZD"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script> -->
+
+    <script>
+        // Import the functions you need from the SDKs you need
+
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+        // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyB5UNzWjgpOMnb-34oVb4jC40srRMziNOA",
+            authDomain: "to-do-application-cf3e0.firebaseapp.com",
+            projectId: "to-do-application-cf3e0",
+            storageBucket: "to-do-application-cf3e0.appspot.com",
+            messagingSenderId: "492716678144",
+            appId: "1:492716678144:web:b6aa895bf67a04439f8ce5",
+            measurementId: "G-EV21NE3MCJ"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
